@@ -23,7 +23,6 @@ import UseMemo from "./pages/ReactHooks/UseMemo";
 import UseReducer from "./pages/ReactHooks/UseReducer";
 
 function App() {
-<<<<<<< HEAD
   return (
     <div className="flex App">
       <Router>
@@ -87,71 +86,6 @@ function App() {
       </Router>
     </div>
   );
-=======
-	return (
-		<div className="flex App">
-			<Router>
-				<Menu />
-				<div className="w-5/6 p-16 px-48">
-					<Switch>
-						<Route path="/" exact>
-							<Home />
-						</Route>
-
-						{/* Specific Components */}
-						<Route exact path="/specific-components">
-							<SpecificComponents />
-						</Route>
-						<Route exact path="/specific-components/view">
-							<ViewAndStyleSheet />
-						</Route>
-						<Route exact path="/specific-components/text">
-							<Text />
-						</Route>
-						<Route exact path="/specific-components/image">
-							<Image />
-						</Route>
-						<Route exact path="/specific-components/text-input">
-							<TextInput />
-						</Route>
-						<Route exact path="/specific-components/button">
-							<Button />
-						</Route>
-						<Route exact path="/specific-components/touchables">
-							<Touchables />
-						</Route>
-						<Route exact path="/specific-components/lists">
-							<Lists />
-						</Route>
-
-						{/* React Hooks */}
-						<Route exact path="/react-hooks">
-							<ReactHooks />
-						</Route>
-						<Route exact path="/react-hooks/usestate">
-							<UseState />
-						</Route>
-						<Route exact path="/react-hooks/useeffect">
-							<UseEffect />
-						</Route>
-						<Route exact path="/react-hooks/usecallback">
-							<UseCallback />
-						</Route>
-						<Route exact path="/react-hooks/useref">
-							<UseRef />
-						</Route>
-						<Route exact path="/react-hooks/usememo">
-							<UseMemo />
-						</Route>
-						<Route exact path="/react-hooks/usereducer">
-							<UseReducer />
-						</Route>
-					</Switch>
-				</div>
-			</Router>
-		</div>
-	);
->>>>>>> parent of 43b6054 (Updates)
 }
 
 export default App;
