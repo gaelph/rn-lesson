@@ -1,0 +1,13 @@
+table {
+	@apply my-4;
+}
+thead {
+	@apply border-gray-300 border-b-2 border-t;
+}
+tr {
+	@apply border-gray-300 border-b;
+}
+th,
+td {
+	@apply p-2;
+}
