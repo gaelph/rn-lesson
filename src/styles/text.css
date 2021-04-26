@@ -1,0 +1,83 @@
+p {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+span.code {
+	@apply font-mono text-sm text-green-700 bg-green-100 px-2 rounded-sm;
+	padding-top: 0.1em;
+	padding-bottom: 0.2em;
+	white-space: nowrap;
+}
+
+.button {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.75;
+	color: white;
+	flex: 0 0 auto;
+	padding: 10px 15px;
+	background-color: rgb(160, 160, 160);
+	border-radius: 3px;
+	text-align: center;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+	cursor: pointer;
+	text-decoration: none;
+	display: flex;
+}
+a.button {
+	color: white !important;
+	text-decoration: none !important;
+}
+.button.back::before {
+	content: "‹";
+	display: inline-flex;
+	width: 0.7em;
+	height: 0.7em;
+	font-size: 2em;
+	line-height: 0.5em;
+	margin-right: 0.5em;
+	padding-bottom: 0.3em;
+	align-self: center;
+	justify-content: center;
+	align-items: baseline;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 9999999px;
+}
+
+.button.next {
+	background-color: rgb(59, 108, 212);
+}
+.button.next::after {
+	content: "›";
+	display: inline-flex;
+	width: 0.7em;
+	height: 0.7em;
+	font-size: 2em;
+	line-height: 0.5em;
+	margin-left: 0.5em;
+	padding-bottom: 0.3em;
+	align-self: center;
+	justify-content: center;
+	align-items: baseline;
+	background-color: rgba(255, 255, 255, 0.3);
+	border-radius: 9999999px;
+}
+
+ul {
+	list-style: disc !important;
+	padding-left: 2em !important;
+	padding-top: 1em !important;
+	padding-bottom: 1em !important;
+}
+
+blockquote {
+	@apply bg-gray-200 p-3 border-gray-300 border-l-4;
+}
+
+a {
+	@apply text-indigo-600;
+	color: rgba(79, 70, 229, var(--tw-text-opacity)) !important;
+	text-decoration: underline !important;
+}
