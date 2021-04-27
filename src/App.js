@@ -17,10 +17,16 @@ import Lists from "./pages/SpecificComponents/Lists";
 import ReactHooks from "./pages/ReactHooks";
 import UseState from "./pages/ReactHooks/UseState";
 import UseEffect from "./pages/ReactHooks/UseEffect";
-import UseCallback from "./pages/ReactHooks/UseCallback";
 import UseRef from "./pages/ReactHooks/UseRef";
-import UseMemo from "./pages/ReactHooks/UseMemo";
-import UseReducer from "./pages/ReactHooks/UseReducer";
+import Others from "./pages/ReactHooks/Others";
+import Custom from "./pages/ReactHooks/Custom";
+
+import ApplicationDeveloppement from "./pages/ApplicationDeveloppement";
+import ProjectStructure from "./pages/ApplicationDeveloppement/ProjectStructure";
+import Navigation from "./pages/ApplicationDeveloppement/Navigation";
+import State from "./pages/ApplicationDeveloppement/State";
+import Animations from "./pages/ApplicationDeveloppement/Animations";
+import Sensors from "./pages/ApplicationDeveloppement/Sensors";
 
 function App() {
   return (
@@ -69,17 +75,33 @@ function App() {
             <Route exact path="/react-hooks/useeffect">
               <UseEffect />
             </Route>
-            <Route exact path="/react-hooks/usecallback">
-              <UseCallback />
-            </Route>
             <Route exact path="/react-hooks/useref">
               <UseRef />
             </Route>
-            <Route exact path="/react-hooks/usememo">
-              <UseMemo />
+            <Route exact path="/react-hooks/others">
+              <Others />
             </Route>
-            <Route exact path="/react-hooks/usereducer">
-              <UseReducer />
+            <Route exact path="/react-hooks/custom">
+              <Custom />
+            </Route>
+
+            <Route exact path="/application-development">
+              <ApplicationDeveloppement />
+            </Route>
+            <Route exact path="/application-development/project-structure">
+              <ProjectStructure />
+            </Route>
+            <Route exact path="/application-development/navigation">
+              <Navigation />
+            </Route>
+            <Route exact path="/application-development/state">
+              <State />
+            </Route>
+            <Route exact path="/application-development/animations">
+              <Animations />
+            </Route>
+            <Route exact path="/application-development/sensors">
+              <Sensors />
             </Route>
           </Switch>
         </div>
