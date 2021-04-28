@@ -10,8 +10,9 @@ export default function UseEffect() {
 
       <p>
         On utilise <span className="code">useEffect</span> pour appeler des
-        fonctions avec des « effets de bord », comme des requêtes HTTP, écrire
-        ou lire depuis <span className="code">AsyncStorage</span>, etc.
+        fonctions avec des «&nbsp;effets de bord&nbsp;», comme des requêtes
+        HTTP, écrire ou lire depuis <span className="code">AsyncStorage</span>,
+        etc.
       </p>
 
       <h3>API</h3>

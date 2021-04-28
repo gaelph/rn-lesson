@@ -9,16 +9,17 @@ export default function UseEffect() {
       <h1>{"Autres Hooks"}</h1>
       <h2>useMemo</h2>
       <p>
-        <span className="code">useMemo</span> s’utilise pour « mémoïser » le
-        résultat d’une opération, c’est-à-dire garder en mémoire le résulat, et
-        ne répéter l’opération que si les paramètres d’entrée changent.
+        <span className="code">useMemo</span> s’utilise pour
+        «&nbsp;mémoïser&nbsp;» le résultat d’une opération, c’est-à-dire garder
+        en mémoire le résulat, et ne répéter l’opération que si les paramètres
+        d’entrée changent.
       </p>
       <h3>API</h3>
       <p>Il prend 2 paramètres&nbsp;:</p>
       <ul>
         <li>
-          <span className="code">callback</span> - une fonction qui porduit
-          retourne une valeur
+          <span className="code">callback</span> - une fonction qui retourne une
+          valeur
         </li>
         <li>
           <span className="code">dependences</span> - un tableau avec les
@@ -39,9 +40,9 @@ export default function UseEffect() {
       </p>
       <h2>useCallback</h2>
       <p>
-        <span className="code">useCallback</span> s’utilise pour « mémoïser »
-        une fonction qui serait ensuite passée en props à des composants
-        enfants.
+        <span className="code">useCallback</span> s’utilise pour
+        «&nbsp;mémoïser&nbsp;» une fonction qui serait ensuite passée en props à
+        des composants enfants.
       </p>
       <p>
         En effet, comme les composants fonctionnels sont appelés fréquemment,
@@ -49,7 +50,7 @@ export default function UseEffect() {
         redéfinie à chaque rendu, créant une nouvelle référence. Comme React
         utilise <span className="code">===</span> pour comparer les props et
         déterminer si un composant doit être rendu, les composants enfants
-        utilisant la fonction onClick seraient systématiquement rendus
+        utilisant la fonction onClick seraient systématiquement rendus.
       </p>
       <h3>API</h3>
       <p>Il prend 2 paramètres&nbsp;:</p>
@@ -62,7 +63,7 @@ export default function UseEffect() {
           dépendances
         </li>
       </ul>
-      <p>Il retourne la callback</p>
+      <p>Il retourne la callback.</p>
       <p>
         Ex.{" "}
         <span className="code">
@@ -73,8 +74,8 @@ export default function UseEffect() {
       </p>
       <h2>useReducer</h2>
       <p>
-        Le hook <span className="code">useReducer</span> est semblabe au hook{" "}
-        <span className="code">useState</span>, mais une approche plus
+        Le hook <span className="code">useReducer</span> est semblable au hook{" "}
+        <span className="code">useState</span>, mais avec une approche plus
         structurée pour gérer des valeurs plus complexes.
       </p>
       <p>
@@ -97,24 +98,24 @@ export default function UseEffect() {
 
       <ul>
         <li>
-          <span className="code">reducer</span> - une fonction sans effet de
+          <span className="code">reducer</span> – une fonction sans effets de
           bord qui prend l’état courant et une action, et retourne un nouvel
           état basé sur l’action
         </li>
         <li>
-          <span className="code">initialState</span> - la valeur initiale de
+          <span className="code">initialState</span> – la valeur initiale de
           l’état
         </li>
       </ul>
 
       <p>
-        Il retourne l’état courant et une fonction dispatch pour modifier
-        l’état.
+        Il retourne l’état courant et une fonction{" "}
+        <span className="code">dispatch</span> pour modifier l’état.
       </p>
       <h3>Exemple</h3>
       <p>
-        Dans cet exemple, useReducer nous permet de stocker le prénom et le nom
-        dans un seul objet.
+        Dans cet exemple, <span className="code">useReducer</span> nous permet
+        de stocker le prénom et le nom dans un seul objet.
       </p>
       <blockquote>
         Par convention, les actions sont des objets avec une propriété

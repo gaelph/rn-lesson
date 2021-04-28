@@ -21,8 +21,8 @@ export default function Animations() {
         <li>
           <span className="code">Animated.View</span>,{" "}
           <span className="code">Animated.Text</span>, ... - composants spéciaux
-          qui peuvent être animés (les autre ne le peuvent pas vous aurez des
-          erreur bizarres){" "}
+          qui peuvent être animés (les autres ne le peuvent pas, vous aurez des
+          erreurs bizarres){" "}
         </li>
         <li>
           <span className="code">Animated.timing</span>,{" "}
@@ -52,10 +52,10 @@ export default function MyComponent() {
       />
       <h2>2. Choissez un composant à animer</h2>
       <p>
-        <span className="code">Animated</span> exporte des version spéciales de{" "}
+        <span className="code">Animated</span> exporte des versions spéciales de{" "}
         <span className="code">View</span>, <span className="code">Text</span>,
         et de <span className="code">Image</span>. Ces composants peuvent avoir
-        des Animated.Value dans leurs prop style. Pour animer autre chose, vous
+        des Animated.Value dans leur prop style. Pour animer autre chose, vous
         pouvez aussi emballer n’importe quel composant&nbsp;:
         <span clasName="code">
           const AnimatedButton = Animated.createAnimatedComponent(Button)
@@ -85,13 +85,16 @@ export default function MyComponent() {
       />
       <h2>3. Animer !</h2>
       <p>
-        Choisissez une fonction d’animation, comme Animated.timing, et appellez
-        .start(). L’animation dois se déclancher quand on clique sur le bouton.
+        Choisissez une fonction d’animation, comme{" "}
+        <span className="code">Animated.timing</span>, et appellez
+        <span className="code">.start()</span>. L’animation dois se déclencher
+        quand on clique sur le bouton.
       </p>
       <p>
-        On veut utiliser l’option useNativeDriver dès que possible – Ça améliore
-        considérablement les performances, mais ne peut être utilisé que sur des
-        propriété qui n’affectent pas la mise en page.
+        On veut utiliser l’option <span className="code">useNativeDriver</span>{" "}
+        dès que possible – Ça améliore considérablement les performances, mais
+        ne peut être utilisé que sur des propriétés qui n’affectent pas la mise
+        en page.
       </p>
       <p>
         Pour déplacer un élément, ou changer ses dimensions, on préfèrera
@@ -131,7 +134,7 @@ export default function MyComponent() {
       />
       <h2>Interpolation</h2>
       <p>
-        Pour des animations plus complexes, on utiliser n’une utiliser qu’une
+        Pour des animations plus complexes, on peut n’utiliser qu’une
         <span className="code">Animated.Value</span>, mais l’interpoler dans
         différentes régions pour d’autres styles.
       </p>

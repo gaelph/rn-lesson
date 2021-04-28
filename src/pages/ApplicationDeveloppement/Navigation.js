@@ -8,14 +8,18 @@ export default function Navigation() {
     <div className="w-full">
       <h1>Navigation</h1>
       <p>
-        La navigation entre les différentes plateforme est une chose compliquée.
-        iOS et Android ont deux approches complètement difféentes sur les sujet,
-        et aucune des deux n’est semblable à la navigation dans le navigateur.
-        Pour cette raison, React Native ne fourni aucun outil pour la gérer.
+        La navigation entre les différentes plateformes est une chose
+        compliquée. iOS et Android ont deux approches complètement difféentes
+        sur le sujet, et aucune des deux n’est semblable à la navigation dans le
+        navigateur. Pour cette raison, React Native ne fourni aucun outil pour
+        la gérer.
       </p>
       <p>
         Nous allons donc devoir recourir à une librairie tierce&nbsp;:
-        react-navigation.
+        <a href="https://reactnavigation.org/" target="_blank" rel="noreferrer">
+          react-navigation
+        </a>
+        .
       </p>
       <p>La documentation de react-navigation explique comment l’installer.</p>
       <p>Ensuite il nous reste 3 choses à faire&nbsp;:</p>
@@ -59,7 +63,7 @@ const Root = createStackNavigator()
       <p>Un composant par écran.</p>
       <p>
         Les écrans sont des composants React comme les autres. Ils reçoivent des
-        props spécifiques à la navigation
+        props spécifiques à la navigation&nbsp;:
       </p>
       <Playground
         noPlayer
@@ -70,14 +74,18 @@ const Root = createStackNavigator()
 `}
       />
       <h3>3. On rend le tout</h3>
-      <p>Enfin, on rend un NavigationContainer avec notre navigator dedans.</p>
+      <p>
+        Enfin, on rend un <span className="code">NavigationContainer</span> avec
+        notre navigator dedans.
+      </p>
       <p>
         Chaque écran défini une route dans l’app. On peut imbriquer des
         navigators, un stack navigator dans un tab navigator : on peut utiliser
         un autre navigator comme screen.
       </p>
       <blockquote>
-        En revanche, on n’a besoin que d’un NavigationContainer.
+        En revanche, on n’a besoin que d’un{" "}
+        <span className="code">NavigationContainer</span>.
       </blockquote>
       <Playground
         noPlayer
@@ -130,7 +138,6 @@ const App = () => {
 
 const Screen1 = () => {
   const navigation = useNavigation()
-  const route = useRoute()
 
   return (
     <Button

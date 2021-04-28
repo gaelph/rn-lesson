@@ -10,14 +10,13 @@ export default function ListsPages() {
       <h2>Scroll View</h2>
 
       <p>
-        Les <span className="code">ScrollView</span> permettent permettent
-        d’avoir une surface scrollable, autant verticalement que
-        horizontalement. <br />
-        Elles offrent beaucoup de possibilités de customization,{" "}
+        <span className="code">ScrollView</span> permet d’avoir une surface
+        scrollable, autant verticalement que horizontalement. <br />
+        Elle offre beaucoup de possibilités de customisation,{" "}
         <a href="https://reactnative.dev/docs/scrollview">
           (voir la documentation offcielle)
         </a>{" "}
-        mais pour de meilleurs performances, on préfèrera les{" "}
+        mais pour de meilleurs performances, on préfèrera{" "}
         <span className="code">FlatList</span> et{" "}
         <span className="code">SectionList</span>.
       </p>
@@ -25,22 +24,21 @@ export default function ListsPages() {
       <h2>Flat List</h2>
 
       <p>
-        Les <span className="code">FlatList</span> sont utilisées pour les grand
-        quantité de contenu scrollable (c.f. Twitter ou Tumblr). Elles ont les
+        <span className="code">FlatList</span> est utilisée pour les grandes
+        quantités de contenu scrollable (c.f. Twitter ou Tumblr). Elle a les
         mêmes props que
-        <span className="code">ScrollView</span> dont elles héritent, mais avec
-        des performances accrues&nbsp;: seul le contenu visible à l’écran est
-        rendu, et seules les rangées nécessitant une mise à jour sont
-        re-rendues.
+        <span className="code">ScrollView</span> dont elle hérite, mais avec des
+        performances accrues&nbsp;: seul le contenu visible à l’écran est rendu,
+        et seules les rangées nécessitant une mise à jour sont re-rendues.
         <br />
-        Ells peuvent être scrollées horizontalement ou verticalement.
+        Elle peut être scrollée horizontalement ou verticalement.
       </p>
 
       <p>
-        Elles ne rendent pas leur enfants, mais utilsent la prop{" "}
+        Elle ne rend pas ses enfants, mais utilse la prop{" "}
         <span className="code">renderItem</span>. Celle-ci est une fonction qui
         prend comme paramètre un élément du tableau{" "}
-        <span className="code">data</span>, et retourne un Element React.
+        <span className="code">data</span>, et retourne un élement React.
         <br />
         Chaque élément du tableau <span className="code">data</span> doit avoir
         un identifiant unique pour que React puisse déterminer les
@@ -88,9 +86,9 @@ const styles = StyleSheet.create({
       <h2 className="mt-6">Section List</h2>
 
       <p>
-        Les <span className="code">SectionList</span> sont comme les{" "}
-        <span className="code">FlatList</span>, mais peuvent avoir des entêtes
-        de section et des groupes de rangés distincts.
+        <span className="code">SectionList</span> est comme{" "}
+        <span className="code">FlatList</span>, mais peut avoir des en-têtes de
+        section et des groupes de rangés distincts.
       </p>
 
       <p>
@@ -177,9 +175,9 @@ const styles = StyleSheet.create({
         spécifiée dans le tableau <span className="code">sections</span>, une
         par section, au lieu d’une prop de{" "}
         <span className="code">SectionList</span>. Chaque section peut être
-        rendue différamment. Une alternative serait d’utiliser les données des
+        rendue différemment. Une alternative serait d’utiliser les données des
         éléments des <span className="code">data</span> pour rendre chaque
-        élément différamment.
+        élément différemment.
       </p>
 
       <Playground

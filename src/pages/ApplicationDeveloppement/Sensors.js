@@ -38,7 +38,7 @@ export default function Sensors() {
         </li>
       </ul>
       <p>
-        <span className="code">react-native-sensors</span> expote des
+        <span className="code">react-native-sensors</span> exporte des
         observables RxJs mais il est aisé de les emballer dans des hooks. Par
         exemple&nbsp;
       </p>

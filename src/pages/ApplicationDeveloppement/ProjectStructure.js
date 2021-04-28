@@ -10,10 +10,10 @@ export default function ProjectStructure() {
       <h2>Organisation des projets</h2>
 
       <p>
-        Il y a plein de bonnes façons d’organiser un projet. Voici quelques une
+        Il y a plein de bonnes façons d’organiser un projet. Voici quelques unes
         d’entre-elles pour des projets de différentes tailles. Si vous êtes déjà
-        familier avec le déverloppement web et React, l’organisation des projets
-        et sensiblement la même.
+        familier·ère avec le développement web et React, l’organisation des
+        projets et sensiblement la même.
       </p>
 
       <h3>Petits projets</h3>
@@ -34,22 +34,24 @@ export default function ProjectStructure() {
 
       <p>
         Généralement, on a un composant par fichier, et ce composant devrait
-        être le default export. Le fichier a le même nom que le componant, et
-        les noms de composants commencent par une majuscule. Le nom du fichier
-        commence donc par une majuscule aussi.
+        être le «&nbsp;default export&nbsp;». Le fichier a le même nom que le
+        componant, et les noms de composants commencent par une majuscule. Le
+        nom du fichier commence donc par une majuscule aussi.
       </p>
 
       <h3>Projets moyens</h3>
 
       <p>
-        Si l’application grandit, on séparera les composants « écrans » dans un
-        dossier <span className="code">screen</span> et créera des sous-dossiers
-        dans <span className="code">compenents</span>. Un composant « écran »
-        est un composant qui occupe tout l’écran, un peu comme une page en web.
+        Si l’application grandit, on séparera les composants
+        «&nbsp;écrans&nbsp;» dans un dossier{" "}
+        <span className="code">screen</span> et créera des sous-dossiers dans{" "}
+        <span className="code">components</span>. Un composant
+        «&nbsp;écran&nbsp;» est un composant qui occupe tout l’écran, un peu
+        comme une page en web.
       </p>
 
       <p>
-        On aura également tendance à séparerer les{" "}
+        On aura également tendance à séparer les{" "}
         <span className="code">navigators</span>, responsables de la navigation
         dans l’application.
       </p>
@@ -96,8 +98,8 @@ export default function ProjectStructure() {
           gérer l’état global de l’application{" "}
         </li>
         <li>
-          <span className="code">styles</span>: coleurs et élements de style
-          partagés (parfois appelé theme
+          <span className="code">styles</span>: couleurs et élements de style
+          partagés (parfois appelé theme)
         </li>
         <li>
           <span className="code">utils</span>: autres fonctions comme le
@@ -131,12 +133,20 @@ export default function ProjectStructure() {
 └── ...`}
       </pre>
 
-      <h3>Grand Projets</h3>
+      <h3>Grands Projets</h3>
 
       <p>
-        Quand un projet grandit est inclus un grand nombre de fonctionnalités il
-        est commun de catégoriser les fichiers par domaine, ou fonctionnalités,
-        à la racine du projet. (c.f. Domain Driven Development)
+        Quand un projet grandit est inclut un grand nombre de fonctionnalités,
+        il est commun de catégoriser les fichiers par domaine, ou
+        fonctionnalités, à la racine du projet. (c.f.{" "}
+        <a
+          href="https://fr.wikipedia.org/wiki/Conception_pilot%C3%A9e_par_le_domaine"
+          taget="_blank"
+          rel="noreferrer"
+        >
+          Domain Driven Development
+        </a>
+        )
       </p>
 
       <p>
@@ -187,14 +197,14 @@ export default function ProjectStructure() {
 
       <p>
         Dans React (Native), le composant n’est qu’une brique de notre UI.
-        Certain frameworks ont des concepts de « vue » et de « controllers »,
-        mais rien de tout ça n’existe dans React. C’est au développeur de faire
-        le travail.
+        Certains frameworks ont des concepts de «&nbsp;vue&nbsp;» et de
+        «&nbsp;controllers&nbsp;», mais rien de tout ça n’existe dans React.
+        C’est au développeur de faire le travail.
       </p>
 
       <p>
         Une façon de faire commune est de séparer les composants de présentation
-        des containers.
+        des conteneurs (containers).
       </p>
 
       <h3>Containers</h3>
@@ -207,9 +217,9 @@ export default function ProjectStructure() {
       <p>
         Les containers ont connaissance des données et de la logique de votre
         application. Il récupèrent les données et les passent, avec les
-        callbacks aux components présentationnels. Ils s’occupent de mettre à
+        callbacks, aux components présentationnels. Ils s’occupent de mettre à
         jour les données quand l’utilisateur interagit avec l’application. Ils
-        ne devraient pas rendre de composants commet Text ou Image – ça, c’ets
+        ne devraient pas rendre de composants commet Text ou Image – ça, c’est
         pour les composants présentationnels.
       </p>
 
@@ -221,13 +231,13 @@ export default function ProjectStructure() {
         bien qu’ils pourraient être utilisés dans d’autres applications sans
         modifications.
         <br />
-        On les appelle souvent « composants », par opposition aux « containers
-        ».
+        On les appelle souvent «&nbsp;composants&nbsp;», par opposition aux
+        «&nbsp;containers&nbsp;».
       </p>
 
       <p>
         Bien séparer la logique de la présentation permet de partager du code
-        facilement entre application de projets différents et donc de gagner du
+        facilement entre applications de projets différents et donc de gagner du
         temps.
       </p>
 

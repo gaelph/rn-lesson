@@ -8,14 +8,14 @@ export default function State() {
     <div className="w-full">
       <h1>État Global</h1>
       <p>
-        Comme React ne se préocuppe que de la vue, il ne fourni aucune solution
-        pour gérer l’état global des données de l’application. Or, à mesure
-        qu’une application grandit, il peut devenir difficile de gérer
+        Comme React ne se préocuppe que de la vue, il ne fourni de bonne
+        solution pour gérer l’état global des données de l’application. Or, à
+        mesure qu’une application grandit, il peut devenir difficile de gérer
         l’ensemble des données qui vivent&nbsp;: infos utilisateur, contenu
         téléchargé depuis une API, images, etc.
       </p>
       <p>
-        Il y a, comme souvent, plusieurs façon de faire, en fonction de la
+        Il y a, comme souvent, plusieurs façons de faire, en fonction de la
         taille de votre application.
       </p>
 
@@ -32,7 +32,8 @@ export default function State() {
           <tr>
             <th>useReducer</th>
             <td>
-              C’est un hook fourni par React. Ça peut suffire pour commencer.
+              C’est un hook fourni par React. Ça peut suffire pour commencer,
+              mais c’est pénible à utiliser.
             </td>
           </tr>
           <tr>
@@ -64,8 +65,8 @@ export default function State() {
       </blockquote>
 
       <p>
-        Comme Redux, Zustand permet de créer de stores pour y stocker des états
-        complexes. Ils peut y avoir plusieurs stores dans la même application
+        Comme Redux, Zustand permet de créer des stores pour y stocker des états
+        complexes. Il peut y avoir plusieurs stores dans la même application.
       </p>
 
       <p>
@@ -115,7 +116,8 @@ function Controls() {
         l’appli.
         <br />
         Pour ça, nous avons <span className="code">AsyncStorage</span> (qui
-        n’est plus une API fournie par React Native, mais une librairie tierce :{" "}
+        n’est plus une API fournie par React Native, mais une librairie
+        tierce)&nbsp;:{" "}
         <a href="https://react-native-async-storage.github.io/async-storage/docs/install">
           Async Storage
         </a>
@@ -126,8 +128,9 @@ function Controls() {
         <span className="code">setItem</span>
         et <span className="code">getItem</span> des{" "}
         <span className="code">localStorage</span> et
-        <span className="code">sessonStorage</span> de la WebAPI, à la
-        différence près qu’elles sont asychrones (elles retournent des Promise)
+        <span className="code">sessionStorage</span> de la WebAPI, à la
+        différence près qu’elles sont asynchrones (elles retournent des
+        Promise).
       </p>
 
       <h3>Avec Zustand</h3>

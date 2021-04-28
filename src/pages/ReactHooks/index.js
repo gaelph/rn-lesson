@@ -8,9 +8,9 @@ export default function ReactHooks() {
       <h1>React… avec les hooks&nbsp;!</h1>
 
       <p>
-        Cette section est plus un rappel, pour ceux qui se seraient déjà
-        frotté·e·s aux fameux hooks de React, ou une succincte introduction pour
-        les autres.
+        Cette section est plus un rappel, pour celles et ceux qui se seraient
+        déjà frotté·e·s aux fameux hooks de React, ou une succincte introduction
+        pour les autres.
       </p>
 
       <p>

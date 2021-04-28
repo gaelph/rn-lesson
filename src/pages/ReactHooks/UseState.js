@@ -8,16 +8,16 @@ export default function UseState() {
     <div className="w-full">
       <h1>{"useState()"}</h1>
       <p>
-        Le hook <span className="code">useState</span> permet de se « souvenir »
-        d’une valeur dans un composant fonctionnel. Comme un composant
-        fonctionnel peut être appelé de nombreuses fois durant son cycle de vie,
-        toutes les variables déclrées normalement seront réinitialisées. Avec{" "}
-        <span className="code">useState</span>, React se souviendra de l’état de
-        cette variable pour nous
+        Le hook <span className="code">useState</span> permet de se
+        «&nbsp;souvenir&nbsp;» d’une valeur dans un composant fonctionnel. Comme
+        un composant fonctionnel peut être appelé de nombreuses fois durant son
+        cycle de vie, toutes les variables déclrées normalement seront
+        réinitialisées. Avec <span className="code">useState</span>, React se
+        souviendra de l’état de cette variable pour nous.
       </p>
       <h3>API</h3>
       <p>
-        Ce hook ne prend qu’un argument, l’état initial, et retourne un tableae
+        Ce hook ne prend qu’un argument, l’état initial, et retourne un tableau
         avec deux éléments&nbsp;:
       </p>
       <ul>
@@ -80,19 +80,20 @@ export default function App() {
         on n’appelle pas
         <span className="code">diceRolls.push(randomDiceRoll())</span>. Au lieu
         de cela, on passe un nouveau tableau contenant tous les elements de{" "}
-        <span className="code">diceRoll</span> et la nouvelle valeur. Pourquoi ?
+        <span className="code">diceRoll</span> et la nouvelle valeur.
+        Pourquoi&nbsp;?
       </p>
 
       <p>
-        Les hooks peuvent déclancher un rendu de nos composant et une mise à
+        Les hooks peuvent déclencher un rendu de nos composant et une mise à
         jour de l’UI.
-        <span className="code">useState</span> déclanche un rendu quand{" "}
+        <span className="code">useState</span> déclenche un rendu quand{" "}
         <span className="code">setDiceRolls</span> est appelé avec une nouvelle
         valeur. En interne, React utilise <span className="code">===</span> pour
         comparer l’ancienne valeur. Si on ne change que le contenu de l’objet ou
         du tableau (ex. <span className="code">Array.push()</span>),{" "}
         <span className="code">useState</span> ne pourra détecter le changement
-        et ne déclanchera pas de rendu.
+        et ne déclenchera pas de rendu.
       </p>
 
       <BottomButtons
