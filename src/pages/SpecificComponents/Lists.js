@@ -13,7 +13,11 @@ export default function ListsPages() {
         <span className="code">ScrollView</span> permet d’avoir une surface
         scrollable, autant verticalement que horizontalement. <br />
         Elle offre beaucoup de possibilités de customisation,{" "}
-        <a href="https://reactnative.dev/docs/scrollview">
+        <a
+          href="https://reactnative.dev/docs/scrollview"
+          target="_blank"
+          rel="noreferrer"
+        >
           (voir la documentation offcielle)
         </a>{" "}
         mais pour de meilleurs performances, on préfèrera{" "}

@@ -59,7 +59,11 @@ export default function State() {
 
       <blockquote>
         Documentation :{" "}
-        <a href="https://github.com/pmndrs/zustand">
+        <a
+          href="https://github.com/pmndrs/zustand"
+          target="_blank"
+          rel="noreferrer"
+        >
           https://github.com/pmndrs/zustand
         </a>
       </blockquote>
@@ -118,7 +122,11 @@ function Controls() {
         Pour ça, nous avons <span className="code">AsyncStorage</span> (qui
         n’est plus une API fournie par React Native, mais une librairie
         tierce)&nbsp;:{" "}
-        <a href="https://react-native-async-storage.github.io/async-storage/docs/install">
+        <a
+          href="https://react-native-async-storage.github.io/async-storage/docs/install"
+          target="_blank"
+          rel="noreferrer"
+        >
           Async Storage
         </a>
         ).

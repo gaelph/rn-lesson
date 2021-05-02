@@ -17,6 +17,8 @@ export default function Sensors() {
         <a
           clasName="code"
           href="https://react-native-sensors.github.io/docs/Installation.html"
+          target="_blank"
+          rel="noreferrer"
         >
           react-native-sensors
         </a>{" "}
@@ -61,10 +63,10 @@ export default function useAccelerometer() {
 }`}
       />
       <BottomButtons
-        backTo="/application-development/navigation"
-        backLabel="Navigation"
-        nextTo="/application-development/animations"
-        nextLabel="Animations"
+        backTo="/application-development/animations"
+        backLabel="Animations"
+        nextTo="/application-development/permissions"
+        nextLabel="Permissions"
       />
     </div>
   );

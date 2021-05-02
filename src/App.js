@@ -5,6 +5,8 @@ import Menu from "./components/Menu";
 
 import Home from "./pages/Home";
 
+import Environment from "./pages/Environment";
+
 import SpecificComponents from "./pages/SpecificComponents";
 import ViewAndStyleSheet from "./pages/SpecificComponents/View";
 import Text from "./pages/SpecificComponents/Text";
@@ -27,6 +29,7 @@ import Navigation from "./pages/ApplicationDeveloppement/Navigation";
 import State from "./pages/ApplicationDeveloppement/State";
 import Animations from "./pages/ApplicationDeveloppement/Animations";
 import Sensors from "./pages/ApplicationDeveloppement/Sensors";
+import Permissions from "./pages/ApplicationDeveloppement/Permissions";
 
 function App() {
   return (
@@ -37,6 +40,10 @@ function App() {
           <Switch>
             <Route path="/" exact>
               <Home />
+            </Route>
+
+            <Route path="/environment">
+              <Environment />
             </Route>
 
             {/* Specific Components */}
@@ -102,6 +109,9 @@ function App() {
             </Route>
             <Route exact path="/application-development/sensors">
               <Sensors />
+            </Route>
+            <Route exact path="/application-development/permissions">
+              <Permissions />
             </Route>
           </Switch>
         </div>

@@ -17,6 +17,7 @@ export default function Menu() {
         <h5>Vite, React-Native&nbsp;!</h5>
       </Link>
       <ol>
+        <L to="/environment" label="Environment" />
         <L to="/specific-components" label="Composants Spécifiques">
           <L to="/specific-components/view" label={"<View /> et StyleSheet"} />
           <L to="/specific-components/text" label={"<Text />"} />
@@ -45,6 +46,7 @@ export default function Menu() {
           />
           <L to="/application-development/animations" label="Animations" />
           <L to="/application-development/sensors" label="Capteurs" />
+          <L to="/application-development/permissions" label="Permissions" />
         </L>
       </ol>
     </div>
