@@ -48,6 +48,8 @@ export default function Menu() {
           <L to="/application-development/sensors" label="Capteurs" />
           <L to="/application-development/permissions" label="Permissions" />
         </L>
+
+        <L to="/what-you-ll-do" label="Ce que vous allez faire" />
       </ol>
     </div>
   );

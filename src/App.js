@@ -31,6 +31,8 @@ import Animations from "./pages/ApplicationDeveloppement/Animations";
 import Sensors from "./pages/ApplicationDeveloppement/Sensors";
 import Permissions from "./pages/ApplicationDeveloppement/Permissions";
 
+import WhatYoullDo from "./pages/WhatYoullDo";
+
 function App() {
   return (
     <div className="flex App">
@@ -112,6 +114,9 @@ function App() {
             </Route>
             <Route exact path="/application-development/permissions">
               <Permissions />
+            </Route>
+            <Route exact path="/what-you-ll-do">
+              <WhatYoullDo />
             </Route>
           </Switch>
         </div>
