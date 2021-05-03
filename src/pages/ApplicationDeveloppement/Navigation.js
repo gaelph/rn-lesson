@@ -21,92 +21,112 @@ export default function Navigation() {
         </a>
         .
       </p>
+
       <p>La documentation de react-navigation explique comment l’installer.</p>
-      <p>Ensuite il nous reste 3 choses à faire&nbsp;:</p>
+
+      <blockquote>
+        Il est essentiel d’installer au minimum les modules suivants:
+        @react-navigation/native, @react-navigation/stack. Si vous souhaitez
+        utiliser les menus latéraux, installez aussi @react-navigation/drawer.
+        Et @react-navigation/bottom-tabs pour les tabs.
+      </blockquote>
+
+      <h2>NavigationContainer</h2>
+
+      <p>C’est lui qui contient et gère le contexte de navigation.</p>
+
+      <p>
+        Toutes les pages (screens) doivent être des composants enfants d’un
+        NavigationContainer. Ce composant parent de toute l’application doit
+        être un des premiers (sinon le premier) à apparaître dans la hiérarchie
+        des composants.
+      </p>
+
+      <p>Par conséquent, dans votre App.js, on devrait trouver&nbsp;:</p>
+
+      <Playground
+        noPlayer
+        height={300}
+        code={`import React from 'react';
+import { NavigationContainer } from '@react-navigation/native'
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      {/* ...Navigators ... */}
+    </NavigationContainer>
+  )
+}`}
+      />
+
+      <blockquote>
+        Les hooks useNavigation et useRoute ne peuvent être utilisés que dans
+        des composants enfants de NavigationContainer.
+      </blockquote>
+
+      <h2>Les Navigators</h2>
+
+      <p>
+        Les navigators regroupent les pages entre lesquelles il est possible de
+        naviguer.{" "}
+      </p>
+
+      <p>Il en existe de trois sortes&nbsp;:</p>
       <ul>
         <li>
-          Emballer notre application dans un{" "}
-          <span className="code">{"<NavigationContainer>"}</span> importé depuis
-          @react-navigation/native
+          <span className="code">createStackNavigator</span> depuis
+          @react-navigation/stack
         </li>
         <li>
-          Créer l’un de ces navigateurs&nbsp;:
-          <ul>
-            <li>
-              <span className="code">createStackNavigator</span> depuis
-              @react-navigation/stack
-            </li>
-            <li>
-              <span className="code">createBottomTabNavigator</span> depuis
-              @react-navigation/bottom-tabs
-            </li>
-            <li>
-              <span className="code">createDrawerNavigator</span> depuis
-              @react-navigation/drawer
-            </li>
-          </ul>
+          <span className="code">createBottomTabNavigator</span> depuis
+          @react-navigation/bottom-tabs
         </li>
-        <li>Créer les écrans de l’application</li>
+        <li>
+          <span className="code">createDrawerNavigator</span> depuis
+          @react-navigation/drawer
+        </li>
       </ul>
-      <h3>1. Créer un navigateur</h3>
-      <p>On va d’abord créer un stack navigator, qui est le plus simple.</p>
+
+      <p>
+        Par habitude, ils vivent dans un dossier spécifique du projet&nbsp;:
+        navigators
+      </p>
+
+      <p>
+        On va d’abord créer un stack navigator, qui est le plus simple. Ainsi,
+        dans un fichier /navigators/MainNavigator.js, on aurait&nbsp;:
+      </p>
+
       <Playground
         noPlayer
         height={300}
         code={`
 import { createStackNavigator } from '@react-navigation/stack'
+import Screen1 from '../screens/Screen1'
+import Screen2 from '../screens/Screen2'
+import Screen3 from '../screens/Screen3'
 
 const Root = createStackNavigator()
+
+export default function MainNavigator() {
+  return (
+    <Root.Navigator>
+      <Root.Screen name="Screen1" component={Screen1} />
+      <Root.Screen name="Screen2" component={Screen2} />
+      <Root.Screen name="Screen3" component={Screen3} />
+    </Root.Navigator>
+  )
+}
       `}
       />
-      <h3>2. Créer les écrans</h3>
-      <p>Un composant par écran.</p>
-      <p>
-        Les écrans sont des composants React comme les autres. Ils reçoivent des
-        props spécifiques à la navigation&nbsp;:
-      </p>
-      <Playground
-        noPlayer
-        height={300}
-        code={`const Screen1 = ({ navigation, route }) => {
-  return <Text>Screen1</Text>
-}
-`}
-      />
-      <h3>3. On rend le tout</h3>
-      <p>
-        Enfin, on rend un <span className="code">NavigationContainer</span> avec
-        notre navigator dedans.
-      </p>
-      <p>
-        Chaque écran défini une route dans l’app. On peut imbriquer des
-        navigators, un stack navigator dans un tab navigator : on peut utiliser
-        un autre navigator comme screen.
-      </p>
-      <blockquote>
-        En revanche, on n’a besoin que d’un{" "}
-        <span className="code">NavigationContainer</span>.
-      </blockquote>
-      <Playground
-        noPlayer
-        height={400}
-        code={`import { NavigationContainer } from '@react-navigation/native'
 
-// ...
-
-const App = () => {
-  return (
-    <NavigationContainer>
-      <Root.Navigator>
-        <Root.Screen name="Screen1" component={Screen1} />
-        <Root.Screen name="Screen2" component={Screen2} />
-        <Root.Screen name="Screen3" component={Screen3} />
-      </Root.Navigator>
-    </NavigationContainer>
-  )
-}`}
-      />
       <h2>Naviguer</h2>
+      <blockquote>
+        Comme indiqué precédemment, les hooks useNavigation et useRoute ne
+        peuvent être utilisés que dans des screens ou des composants enfants de
+        screens.
+      </blockquote>
+
       <p>Chaque navigateur a sa propre fonction pour naviguer</p>
       <ul>
         <li>
@@ -119,6 +139,7 @@ const App = () => {
           Drawer: <span className="code">openDrawer</span>
         </li>
       </ul>
+
       <p>
         Pour naviguer, on donne le nom de l’écran et, optionnellement, des
         paramètres, ex.{" "}
@@ -151,7 +172,7 @@ const Screen1 = () => {
           "Screen2.js": `import { useRoute } from '@react-navigation/native'
 
 const Screen2 = () => {
-  const rout = useRoute()
+  const route = useRoute()
 
   return <Text>{route.params.paramA}</Text>
 }
