@@ -39,6 +39,10 @@ export default function Menu() {
             to="/application-development/project-structure"
             label="Structures de projets"
           />
+          <L
+            to="/application-development/android-and-ios"
+            label="Android et iOS"
+          />
           <L to="/application-development/navigation" label="Navigation" />
           <L
             to="/application-development/state"

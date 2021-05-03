@@ -25,6 +25,7 @@ import Custom from "./pages/ReactHooks/Custom";
 
 import ApplicationDeveloppement from "./pages/ApplicationDeveloppement";
 import ProjectStructure from "./pages/ApplicationDeveloppement/ProjectStructure";
+import AndroidAndiOS from "./pages/ApplicationDeveloppement/AndroidAndiOS";
 import Navigation from "./pages/ApplicationDeveloppement/Navigation";
 import State from "./pages/ApplicationDeveloppement/State";
 import Animations from "./pages/ApplicationDeveloppement/Animations";
@@ -99,6 +100,9 @@ function App() {
             </Route>
             <Route exact path="/application-development/project-structure">
               <ProjectStructure />
+            </Route>
+            <Route exact path="/application-development/android-and-ios">
+              <AndroidAndiOS />
             </Route>
             <Route exact path="/application-development/navigation">
               <Navigation />

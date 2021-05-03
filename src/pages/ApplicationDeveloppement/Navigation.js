@@ -181,8 +181,8 @@ const Screen2 = () => {
       />
 
       <BottomButtons
-        backTo="/application-development/project-structure"
-        backLabel="Structures"
+        backTo="/application-development/android-and-ios"
+        backLabel="Android et iOS"
         nextTo="/application-development/state"
         nextLabel="État global et persistance"
       />

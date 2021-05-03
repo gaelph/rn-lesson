@@ -272,8 +272,8 @@ export default function ProjectStructure() {
       <BottomButtons
         backTo="/application-development"
         backLabel="Développement d’Application"
-        nextTo="/application-development/navigation"
-        nextLabel="Navigation"
+        nextTo="/application-development/android-and-ios"
+        nextLabel="Android et iOS"
       />
     </div>
   );
