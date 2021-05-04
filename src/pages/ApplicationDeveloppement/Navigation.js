@@ -100,7 +100,8 @@ export default function App() {
       <Playground
         noPlayer
         height={300}
-        code={`
+        files={{
+          "navigators/MainNavigtor.js": `
 import { createStackNavigator } from '@react-navigation/stack'
 import Screen1 from '../screens/Screen1'
 import Screen2 from '../screens/Screen2'
@@ -117,7 +118,21 @@ export default function MainNavigator() {
     </Root.Navigator>
   )
 }
-      `}
+      `,
+          "App.js": `import React from 'react';
+import { NavigationContainer } from '@react-navigation/native'
+
+import MainNavigator from './navigators/MainNavigator'
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <MainNavigator />
+    </NavigationContainer>
+  )
+}
+          `,
+        }}
       />
 
       <h2>Naviguer</h2>
